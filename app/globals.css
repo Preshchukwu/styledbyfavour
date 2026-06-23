@@ -57,4 +57,62 @@
   .animate-marquee {
     animation: none !important;
   }
+  .gallery-kb-1,
+  .gallery-kb-2,
+  .gallery-kb-3,
+  .gallery-kb-4,
+  .gallery-kb-5 {
+    animation: none !important;
+  }
 }
+
+/* ── Gallery grid ──────────────────────────────────── */
+.gallery-grid {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-tile {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f0ff;
+  height: 55vw;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery-tile {
+    height: 360px;
+  }
+}
+
+/* ── Ken Burns keyframes ────────────────────────────── */
+@keyframes kb1 {
+  from { transform: scale(1)    translate(0, 0);      }
+  to   { transform: scale(1.07) translate(-1%, -1%);  }
+}
+@keyframes kb2 {
+  from { transform: scale(1.04) translateX(1%);  }
+  to   { transform: scale(1.07) translateX(-2%); }
+}
+@keyframes kb3 {
+  from { transform: scale(1.07) translate(1%, 1%);   }
+  to   { transform: scale(1)    translate(-1%, 0%);  }
+}
+@keyframes kb4 {
+  from { transform: scale(1)    translate(1%, 0);    }
+  to   { transform: scale(1.06) translate(-1%, -1%); }
+}
+@keyframes kb5 {
+  from { transform: scale(1)    translateY(0);   }
+  to   { transform: scale(1.08) translateY(-2%); }
+}
+
+.gallery-kb-1 { animation: kb1  8s   ease-in-out infinite alternate; }
+.gallery-kb-2 { animation: kb2  7s   ease-in-out infinite alternate; }
+.gallery-kb-3 { animation: kb3  9s   ease-in-out infinite alternate; }
+.gallery-kb-4 { animation: kb4  11s  ease-in-out infinite alternate; }
+.gallery-kb-5 { animation: kb5  7.5s ease-in-out infinite alternate; }

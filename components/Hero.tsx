@@ -77,7 +77,7 @@ export default function Hero() {
 
           <ScrollReveal delay={240} className="flex flex-col sm:flex-row gap-3 mt-8">
             <a
-              href="mailto:favournwachukwub490@gmail.com"
+              href="#book"
               className="inline-block text-[11px] font-medium tracking-[0.22em] uppercase text-white bg-plum px-10 py-4 no-underline hover:bg-plum-mid transition-colors duration-200"
             >
               Book Your Appointment

@@ -6,6 +6,7 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
+    window.history.scrollRestoration = 'manual'
     const handleScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
@@ -49,7 +50,7 @@ export default function Nav() {
 
       {/* Desktop CTA */}
       <a
-        href="mailto:favournwachukwub490@gmail.com"
+        href="#book"
         className="hidden md:inline-block text-[11px] font-medium tracking-[0.18em] uppercase text-white bg-plum px-6 py-[10px] no-underline hover:bg-plum-mid transition-colors duration-200"
       >
         Book Now
@@ -93,7 +94,8 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="mailto:favournwachukwub490@gmail.com"
+            href="#book"
+            onClick={() => setMenuOpen(false)}
             className="mt-2 text-[11px] font-medium tracking-[0.18em] uppercase text-white bg-plum px-6 py-3 text-center no-underline hover:bg-plum-mid transition-colors"
           >
             Book Now

@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Marquee from '@/components/Marquee'
 import About from '@/components/About'
 import Services from '@/components/Services'
+import Gallery from '@/components/Gallery'
 import Quote from '@/components/Quote'
 import WhyFavour from '@/components/WhyFavour'
 import Location from '@/components/Location'
@@ -17,6 +18,7 @@ export default function Home() {
       <Marquee />
       <About />
       <Services />
+      <Gallery />
       <Quote />
       <WhyFavour />
       <Location />
