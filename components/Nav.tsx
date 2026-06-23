@@ -20,7 +20,7 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-12 py-5 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-5 transition-all duration-300 ${
         scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-rule'
           : 'bg-transparent'
